@@ -1,0 +1,236 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>flaginfo-pay</groupId>
+  <artifactId>prime-server</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>payGateway Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.7</jdk.version>
+		<spring.version>3.1.3.RELEASE</spring.version>
+		<jersey.version>1.12</jersey.version>
+		<jacksonAll.version>1.9.5</jacksonAll.version>
+		<aspectjweaver.version>1.6.12</aspectjweaver.version>
+		<slf4j.version>1.7.13</slf4j.version>
+		<log4j.version>1.2.17</log4j.version>
+		<slf4jLog4j12.version>1.6.1</slf4jLog4j12.version>
+		<junit.version>4.4</junit.version>
+		<cpdetector.version>1.0.7</cpdetector.version>
+		<chardet.version>1.1</chardet.version>
+		<commonCompress.version>1.9</commonCompress.version>
+		<javaUnrar.version>0.3</javaUnrar.version>
+		<antlr.version>2.7.7</antlr.version>
+		<commonHttpclient.version>3.1</commonHttpclient.version>
+		<diamond.version>2.0.5.3</diamond.version>
+		<redis.version>2.5.1</redis.version>
+		<apiSdkClient.version>v1.3.1</apiSdkClient.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-core</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-all</artifactId>
+			<version>${jacksonAll.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectjweaver.version}</version>
+		</dependency>
+<!-- 
+		<dependency>
+			<groupId>cpdetector</groupId>
+			<artifactId>cpdetector</artifactId>
+			<version>${cpdetector.version}</version>
+		</dependency> -->
+
+		<!-- <dependency>
+			<groupId>chardet</groupId>
+			<artifactId>chardet</artifactId>
+			<version>${chardet.version}</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>${commonCompress.version}</version>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>java.unrar</groupId>
+			<artifactId>java-unrar</artifactId>
+			<version>${javaUnrar.version}</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>antlr</groupId>
+			<artifactId>antlr</artifactId>
+			<version>${antlr.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>${commonHttpclient.version}</version>
+		</dependency>
+		
+		<dependency>
+	    	<groupId>org.slf4j</groupId>
+	    	<artifactId>slf4j-api</artifactId>
+	    	<version>${slf4j.version}</version>
+	    </dependency>
+	    
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		
+		<dependency>
+	    	<groupId>org.slf4j</groupId>
+	    	<artifactId>slf4j-log4j12</artifactId>
+	    	<version>${slf4jLog4j12.version}</version>
+		</dependency>
+		
+		<!-- <dependency>
+			<groupId>com.taobao.diamond</groupId>
+			<artifactId>diamond-utils</artifactId>
+			<version>${diamond.version}</version>
+		</dependency> -->
+
+		<!-- <dependency>
+			<groupId>com.taobao.diamond</groupId>
+			<artifactId>diamond-client</artifactId>
+			<version>${diamond.version}</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${redis.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+<!-- 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+ -->		
+		<!-- <dependency>
+		  <groupId>cn.com.flaginfo</groupId>
+		  <artifactId>api-sdk-client</artifactId>
+		  <version>${apiSdkClient.version}</version>
+		</dependency> -->
+		<dependency>
+           <groupId>com.sun.xml.wss</groupId>
+           <artifactId>xws-security</artifactId>
+           <version>3.0</version>
+        </dependency>
+<dependency>
+    <groupId>com.sun.xml.bind</groupId>
+    <artifactId>jaxb-impl</artifactId>
+    <version>2.1.13</version>
+</dependency>
+
+
+
+    <dependency>
+	    <groupId>cglib</groupId>
+	    <artifactId>cglib-nodep</artifactId>
+	    <version>2.1_3</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>proxool</groupId>
+	    <artifactId>proxool</artifactId>
+	    <version>0.9.1</version>
+	</dependency>
+	<dependency>  
+    	<groupId>proxool</groupId>  
+        <artifactId>proxool-cglib</artifactId>  
+        <version>0.9.1</version>  
+    </dependency>  
+        
+        
+        <dependency>
+	 	<groupId>com.taobao.diamond</groupId>
+ 	 	<artifactId>diamond-utils</artifactId>
+  		<version>2.0.5.3</version>
+	</dependency>
+	<dependency>
+	 	<groupId>com.taobao.diamond</groupId>
+ 	 	<artifactId>diamond-client</artifactId>
+  		<version>2.0.5.3</version>
+	</dependency>
+	
+<!-- 	<dependency>
+		<groupId>oracle.driver</groupId>
+		<artifactId>ojdbc14</artifactId>
+		<version>1.0</version>10.2.0.1.0
+	</dependency> -->
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.38</version><!--5.0.7  可使用别名，5.1.6 5.1.8 5.1.18 需额外设置  -->
+	</dependency>
+	
+	<dependency>
+		<groupId>cpdetector</groupId>
+		<artifactId>cpdetector</artifactId>
+		<version>1.0.7</version>
+	</dependency>
+        
+	</dependencies>
+	 
+</project>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the proxool configuration can be embedded within your own application's.
+	Anything outside the "proxool" tag is ignored. -->
+<something-else-entirely>
+
+	<proxool>
+		<alias>db_pay</alias>
+		<driver-url>jdbc:mysql://10.0.0.135:3306/zx_pay</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="flagroot" />
+			<property name="password" value="flag@mysql_402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	<!-- <proxool>
+		<alias>db_wechart</alias>
+		<driver-url>jdbc:mysql://10.0.0.91:3306/zx_wechart</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_wechart" />
+			<property name="password" value="zx_wechart#5402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+		<alias>db_voice</alias>
+		<driver-url>jdbc:mysql://10.0.0.90:3306/portal</driver-url>
+		<driver-url>jdbc:mysql://10.0.0.86:3306/zx_platform</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_user" />
+			<property name="password" value="zx402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+			<property name="zeroDateTimeBehavior" value="convertToNull"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+		<alias>db_billing</alias>
+		<driver-url>jdbc:mysql://10.0.0.90:3306/portal</driver-url>
+		<driver-url>jdbc:mysql://10.0.0.91:3306/zx_billing</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_billing" />
+			<property name="password" value="zx_billing#5402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+			<property name="zeroDateTimeBehavior" value="convertToNull"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+		<alias>db_channel</alias>
+		<driver-url>jdbc:mysql://10.0.0.90:3306/portal</driver-url>
+		<driver-url>jdbc:mysql://10.0.0.86:3306/zx_platform</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_user" />
+			<property name="password" value="zx402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+			<property name="zeroDateTimeBehavior" value="convertToNull"/>
+		</driver-properties>
+
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+		<alias>db_contacts</alias>
+		<driver-url>jdbc:mysql://10.0.0.90:3306/portal</driver-url>
+		<driver-url>jdbc:mysql://10.0.0.86:3306/zx_platform</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_user" />
+			<property name="password" value="zx402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+			<property name="zeroDateTimeBehavior" value="convertToNull"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	
+	<proxool>
+	<alias>db_cmc</alias>
+		<driver-url>jdbc:mysql://10.0.0.90:3306/portal</driver-url>
+		<driver-url>jdbc:mysql://10.0.0.86:3306/zx_platform</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_user" />
+			<property name="password" value="zx402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+			<property name="zeroDateTimeBehavior" value="convertToNull"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	
+	<proxool>
+		<alias>db_unline</alias>
+		<driver-url>jdbc:mysql://10.0.0.90:3306/portal</driver-url>
+		<driver-url>jdbc:mysql://10.0.0.91:3306/zx_unline</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_unline" />
+			<property name="password" value="zx_unline#5402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+			<property name="zeroDateTimeBehavior" value="convertToNull"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+		<alias>db_notice</alias>
+		<driver-url>jdbc:mysql://10.0.0.90:3306/portal</driver-url>
+		<driver-url>jdbc:mysql://10.0.0.86:3306/zx_platform</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="zx_unline" />
+			<property name="password" value="zx_unline#5402" />
+			<property name="characterEncoding" value="UTF-8"/>
+			<property name="useOldAliasMetadataBehavior" value="true"/>
+		</driver-properties>
+		<house-keeping-sleep-time>300000</house-keeping-sleep-time>
+		<simultaneous-build-throttle>2</simultaneous-build-throttle>
+		<prototype-count>2</prototype-count>
+		<maximum-connection-count>5</maximum-connection-count>
+		<maximum-active-time>3600000</maximum-active-time>
+		<minimum-connection-count>2</minimum-connection-count>
+		<trace>true</trace>
+		在分配连接前后是否进行有效性测试，这个是解决本问题的关键
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>SELECT 1 FROM DUAL</house-keeping-test-sql>
+	</proxool> -->
+</something-else-entirely>
