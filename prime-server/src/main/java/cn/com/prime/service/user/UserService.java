@@ -13,6 +13,7 @@ import cn.com.prime.model.PaymentOrderDetail;
 import cn.com.prime.model.PublicPaymentOrder;
 import cn.com.prime.model.PublicPaymentOrderResult;
 import cn.com.prime.model.QueryOrder;
+import cn.com.prime.model.user.UserModel;
 import cn.com.prime.service.base.WxPayBaseService;
 
 /**
@@ -20,8 +21,17 @@ import cn.com.prime.service.base.WxPayBaseService;
  * @author yangchao.wang
  *	2016年12月6日
  */
-@Service
 public class UserService extends JsonClientService{
+	
+	/**
+	 * 获取用户信息
+	 * @param model
+	 * @return
+	 */
+	public UserModel getUser(UserModel model) {
+		
+		return null;
+	}
 	
 	
 	

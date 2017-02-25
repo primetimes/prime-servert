@@ -1,5 +1,7 @@
 package cn.com.prime.common.support;
 
+import org.apache.log4j.Logger;
+
 import cn.com.prime.common.util.RedisFacade;
 
 /**
@@ -8,6 +10,9 @@ import cn.com.prime.common.util.RedisFacade;
  *
  */
 public class RedisLock implements Lock{
+	
+	
+	private static Logger logger = Logger.getLogger(RedisLock.class);
 	
 	
 	/**
@@ -39,6 +44,15 @@ public class RedisLock implements Lock{
 	}
 	
 	/**
+	 * 获取redis锁,默认10s超时时间
+	 * @param key
+	 * @return
+	 */
+	public static RedisLock getLock(String key){
+		return new RedisLock(key,10000l);
+	}
+	
+	/**
 	 * 获取锁
 	 */
 	public boolean getLock(){
@@ -53,11 +67,12 @@ public class RedisLock implements Lock{
 				break;
 			}
 			if(System.currentTimeMillis()-start>=this.ttl){
+				logger.info("time over,auto release lock key:"+this.key);
 				releaseLock();
 			}else{
 				try {
-					System.out.println("循环获取锁,c="+(c++));
-					Thread.sleep(100);
+					logger.info("loop get the lock,c="+(c++)+" key:"+key);
+					Thread.sleep(300);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					throw new RuntimeException(e);
